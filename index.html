@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="w-75 m-auto mt-3">
+      <h1>Product Management System</h1>
+      <div class="form-group mb-4">
+        <label for="productName" class="mb-2">Product Name</label>
+        <input
+        oninput="productNameValidation()"
+          type="text"
+          class="form-control"
+          name="productName"
+          id="productName"
+        />
+        <div id="nameAlert" class="alert alert-danger text-center my-2 d-none">Product name isn't invalid</div>
+      </div>
+      <div class="form-group mb-4">
+        <label for="productPrice" class="mb-2">Product Price</label>
+        <input
+        oninput="productPriceValidation()"
+          type="text"
+          class="form-control"
+          name="productPrice"
+          id="productPrice"
+        />
+        <div id="priceAlert" class="alert alert-danger text-center my-2 d-none">Product price isn't invalid</div>
+
+      </div>
+      <div class="form-group mb-4">
+        <label for="productCat" class="mb-2">Product Category</label>
+        <input
+        oninput="productCategoryValidation()"
+          type="text"
+          class="form-control"
+          name="productCat"
+          id="productCat"
+        />
+        <div id="catAlert" class="alert alert-danger text-center my-2 d-none">Product category isn't invalid</div>
+
+      </div>
+      <div class="form-group mb-4">
+        <label for="productDesc" class="mb-2">Product Description</label>
+        <input
+        oninput="productDescriptionValidation()"
+          type="text"
+          class="form-control"
+          name="productDesc"
+          id="productDesc"
+        />
+        <div id="desAlert" class="alert alert-danger text-center my-2 d-none">Product description isn't invalid</div>
+      </div>
+      <button onclick="addProduct()" id="myBtn" class="btn btn-outline-info">Add Product</button>
+
+      <div class="form-group my-4">
+        <input
+          type="search"
+          oninput="searchProduct()"
+          class="form-control"
+          id="searchInput"
+          placeholder="Search..."
+        />
+      </div>
+
+      <table class="table mt-4">
+        <thead>
+          <th>Index</th>
+          <th>productName</th>
+          <th>productPrice</th>
+          <th>productCategory</th>
+          <th>productDescription</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </thead>
+        <tbody id="myTable">
+
+        </tbody>
+
+      </table>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
